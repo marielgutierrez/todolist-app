@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 
 type Task = {
   id: number;
-  text: string;
+  title: string;
+  description: string;
+  completed: boolean;
+  createdAt: Date;
 };
 
 function App() {
@@ -41,14 +44,14 @@ function App() {
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Nueva tarea..."
+          placeholder="Ingresar tarea"
         />
         <button type="submit">Agregar</button>
       </form>
 
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>{task.text}</li>
+          <li key={task.id}>{task.title}</li>
         ))}
       </ul>
     </div>

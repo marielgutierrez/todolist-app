@@ -5,14 +5,13 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
-//Middlewares
 app.use(cors());
 app.use(express.json());
 
-//"Base de datos" en memoria
+//BD
 let tasks = [];
 
-//obtener todas las tareas
+//para obtener todas las tareas
 app.get('/api/tasks', (req, res) => {
     res.json(tasks);
 });
@@ -31,11 +30,12 @@ app.post('/api/tasks', (req, res) => {
     res.json(newTask);
 });
 
-//Iniciar servidor
+//iniciar servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
 
+//modificar mi tarea
 app.put('/api/tasks/:id', (req, res) => {
     const id = Number(req.params.id);
     const { title, description, completed } = req.body;
@@ -51,6 +51,7 @@ app.put('/api/tasks/:id', (req, res) => {
     res.json(task);
 });
 
+//eliminar una tarea
 app.delete('/api/tasks/:id', (req, res) => {
     const id = Number(req.params.id);
     const index = tasks.findIndex(t => t.id === id);
