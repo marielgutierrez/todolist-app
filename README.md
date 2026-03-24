@@ -5,8 +5,8 @@ Aplicación para gestión de tareas, fue desarrollada con:
     Node.js + Express (para el Backend)
 
 ## Funcionamiento
-### DEMO
-https://youtu.be/2_3eAeAZQXE
+### DEMO 🎥
+[Ver video]([https://youtu.be/2_3eAeAZQXE])
 
 ## ¿Cómo ejecutar el proyecto?
 
