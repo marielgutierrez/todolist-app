@@ -1,7 +1,7 @@
 import TaskItem from "./TaskItem";
 import "./Tabla.css";
 
-function TaskList({ tasks, onDelete, onToggle }: any) {
+function TaskList({ tasks, onDelete, onToggle, onEdit }: any) {
     return (
         <div className="table">
         <div className="table-header">
@@ -17,6 +17,7 @@ function TaskList({ tasks, onDelete, onToggle }: any) {
             task={task}
             onDelete={onDelete}
             onToggle={onToggle}
+            onEdit={onEdit}
             />
         ))}
         </div>

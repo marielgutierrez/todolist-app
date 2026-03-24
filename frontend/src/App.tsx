@@ -47,7 +47,19 @@ function App() {
       });
   };
 
-
+const editTask = (id: number, title: string, description: string) => {
+  fetch(`http://localhost:3000/api/tasks/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ title, description }),
+  })
+    .then((res) => res.json())
+    .then((updated) => {
+      setTasks(tasks.map((t) => (t.id === updated.id ? updated : t)));
+    });
+};
 
 
   return (
@@ -55,7 +67,7 @@ function App() {
       <h1>Mi lista de tareas</h1>
 
       <TaskForm onAdd={addTask} />
-      <TaskList  tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />
+      <TaskList  tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} onEdit={editTask}/>
     </div>
   );
 }

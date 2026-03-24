@@ -53,3 +53,16 @@ button {
     background-color: #6c63ff;
     color: white;
 }
+
+.edit {
+    background-color: #ffa94d;
+    color: white;
+}
+
+.input-edit {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #1f1f2e;
+    color: white;
+}
