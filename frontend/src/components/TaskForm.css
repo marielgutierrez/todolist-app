@@ -30,3 +30,8 @@ font-weight: bold;
 .button:hover {
 background-color: #535bf2; 
 }
+
+.error {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}

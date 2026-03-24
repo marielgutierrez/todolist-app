@@ -1,0 +1,35 @@
+.top-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #1f1f2e;
+    color: white;
+}
+
+.search::placeholder {
+    color: #aaa;
+}
+
+.filters {
+    display: flex;
+    gap: 6px;
+}
+.filters button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #2a2a3d;
+    color: white;
+    cursor: pointer;
+}
+.filters .active {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
