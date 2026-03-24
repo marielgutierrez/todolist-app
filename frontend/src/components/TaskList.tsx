@@ -1,12 +1,26 @@
 import TaskItem from "./TaskItem";
+import "./Tabla.css";
 
-function TaskList({ tasks }: any) {
+function TaskList({ tasks, onDelete, onToggle }: any) {
     return (
-        <ul>
+        <div className="table">
+        <div className="table-header">
+            <span>Título</span>
+            <span>Descripción</span>
+            <span>Estado</span>
+            <span>Acciones</span>
+        </div>
+
         {tasks.map((task: any) => (
-            <TaskItem key={task.id} task={task} />
+            <TaskItem
+            key={task.id}
+            task={task}
+            onDelete={onDelete}
+            onToggle={onToggle}
+            />
         ))}
-        </ul>
+        </div>
     );
-}
+    }
+
 export default TaskList;

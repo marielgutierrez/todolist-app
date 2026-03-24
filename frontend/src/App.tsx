@@ -22,34 +22,44 @@ function App() {
   const addTask = (task: Task) => {
     setTasks([...tasks, task]);
   };
+  
+  const deleteTask = (id: number) => {
+    fetch(`http://localhost:3000/api/tasks/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      setTasks(tasks.filter((t) => t.id !== id));
+    });
+  };
+
+  const toggleTask = (task: Task) => {
+    fetch(`http://localhost:3000/api/tasks/${task.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        completed: !task.completed,
+      }),
+    })
+      .then((res) => res.json())
+      .then((updated) => {
+        setTasks(tasks.map((t) => (t.id === updated.id ? updated : t)));
+      });
+  };
+
+
+
 
   return (
     <div>
-      <h1>Lista de tareas</h1>
+      <h1>Mi lista de tareas</h1>
 
       <TaskForm onAdd={addTask} />
-      <TaskList tasks={tasks} />
+      <TaskList  tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />
     </div>
   );
 }
 
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-
-  //   fetch("http://localhost:3000/api/tasks", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ text }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((newTask) => {
-  //       setTasks([...tasks, newTask]);
-  //       setText("");
-  //     });
-  // };
 
 
 export default App;

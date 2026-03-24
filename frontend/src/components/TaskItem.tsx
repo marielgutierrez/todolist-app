@@ -1,17 +1,20 @@
-type Task = {
-    id: number;
-    title: string;
-    description: string;
-    completed: boolean;
-};
-
-function TaskItem({ task }: { task: Task }) {
+function TaskItem({ task, onDelete, onToggle }: any) {
     return (
-        <li>
-        <strong>{task.title}</strong>
-        <p>{task.description}</p>
-        <span>{task.completed ? "Si" : "No"}</span>
-        </li>
+        <div className="table-row">
+        <span>{task.title}</span>
+        <span>{task.description}</span>
+        <span>{task.completed ? "✔️" : "❌"}</span>
+
+        <div className="actions">
+            <button className="delete" onClick={() => onDelete(task.id)}>
+            Borrar
+            </button>
+
+            <button className="done" onClick={() => onToggle(task)}>
+            {task.completed ? "UNDO" : "Terminado"}
+            </button>
+        </div>
+        </div>
     );
 }
 

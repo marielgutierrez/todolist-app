@@ -28,19 +28,22 @@ type Props = {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        
+    <form onSubmit={handleSubmit} className="form">
         <input
-            placeholder="Título"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+        className="input"
+        placeholder="Título de la tarea"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
         />
         <input
-            placeholder="Descripción"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+        className="input"
+        placeholder="Agrega una descripción"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
         />
-        <button>Agregar</button>
-        </form>
+        <button className="button">Agregar</button>
+    </form>
     );
 }
 

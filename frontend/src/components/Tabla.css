@@ -1,0 +1,55 @@
+body {
+    background-color: #0f0f1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.table {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1a1a2e;
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    padding: 12px;
+    align-items: center;
+}
+
+.table-header {
+    background-color: #2a2a4a;
+    font-weight: bold;
+}
+
+.table-row {
+    border-top: 1px solid #2f2f4f;
+}
+
+.table-row:hover {
+    background-color: #23233a;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+.done {
+    background-color: #6c63ff;
+    color: white;
+}
