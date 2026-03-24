@@ -7,7 +7,7 @@ Aplicación para gestión de tareas, fue desarrollada con:
 ## ¿Cómo ejecutar el proyecto?
 
 ### PASO 1. Clonar el repositorio
-git clone
+git clone https://github.com/marielgutierrez/todolist-app.git
 
 ### PASO 2. Backend
 cd backend
