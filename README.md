@@ -1,15 +1,15 @@
-#To-do App - Challenge 🚀
+# To-do App - Challenge 🚀
 
 Aplicación para gestión de tareas, fue desarrollada con:
     React + Vite + TypeScript (para el Frontend)
     Node.js + Express (para el Backend)
 ---
-#¿Cómo ejecutar el proyecto?
+# ¿Cómo ejecutar el proyecto?
 
-###PASO 1. Clonar el repositorio
+### PASO 1. Clonar el repositorio
 git clone
 
-###PASO 2. Backend
+### PASO 2. Backend
 cd backend
 npm install
 node index.js
@@ -18,7 +18,7 @@ El servidor se ejecuta en:
 
 👉 http://localhost:3000
 
-###PASO 3. Frontend
+### PASO 3. Frontend
 
 Abrir otra terminal:
 
@@ -32,19 +32,19 @@ La app se ejecuta en:
 
 ---
 
-##✨ Funcionalidades
+## ✨ Funcionalidades
 ✔️ Crear tareas
 🗑️ Eliminar tareas
 ✏️ Editar tareas
 ✅ Marcar como completadas
 🔍 Buscar tareas y por filtros
 
-###⚠️ Aclaraciones
+### ⚠️ Aclaraciones
 Los datos se almacenan en memoria es decir que se pierden al reiniciar el servidor
 
 ---
 
-##Capturas de pantalla
+## Capturas de pantalla
 <img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/64d3adc5-2b23-4550-86cc-5326dbd7dcd1" />
 Para crear una tarea debes completar los campos, de lo contrario no va a dejar agregar si están vacios.
 Click en el botón Agregar
