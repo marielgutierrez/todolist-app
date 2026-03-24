@@ -3,8 +3,8 @@
 Aplicación para gestión de tareas, fue desarrollada con:
     React + Vite + TypeScript (para el Frontend)
     Node.js + Express (para el Backend)
----
-# ¿Cómo ejecutar el proyecto?
+    
+## ¿Cómo ejecutar el proyecto?
 
 ### PASO 1. Clonar el repositorio
 git clone
@@ -30,7 +30,6 @@ La app se ejecuta en:
 
 👉 http://localhost:5173
 
----
 
 ## ✨ Funcionalidades
 ✔️ Crear tareas
@@ -41,8 +40,6 @@ La app se ejecuta en:
 
 ### ⚠️ Aclaraciones
 Los datos se almacenan en memoria es decir que se pierden al reiniciar el servidor
-
----
 
 ## Capturas de pantalla
 <img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/64d3adc5-2b23-4550-86cc-5326dbd7dcd1" />
