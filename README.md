@@ -3,7 +3,11 @@
 Aplicación para gestión de tareas, fue desarrollada con:
     React + Vite + TypeScript (para el Frontend)
     Node.js + Express (para el Backend)
-    
+
+## Funcionamiento
+### DEMO
+https://youtu.be/2_3eAeAZQXE
+
 ## ¿Cómo ejecutar el proyecto?
 
 ### PASO 1. Clonar el repositorio
