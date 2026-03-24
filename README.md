@@ -6,7 +6,7 @@ Aplicación para gestión de tareas, fue desarrollada con:
 
 ## Funcionamiento
 ### DEMO 🎥
-[Ver video]([https://youtu.be/2_3eAeAZQXE])
+https://youtu.be/2_3eAeAZQXE 
 
 ## ¿Cómo ejecutar el proyecto?
 
