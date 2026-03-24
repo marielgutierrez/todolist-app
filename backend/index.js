@@ -8,7 +8,6 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-//BD
 let tasks = [];
 
 //para obtener todas las tareas
@@ -16,7 +15,7 @@ app.get('/api/tasks', (req, res) => {
     res.json(tasks);
 });
 
-//crear tarea
+//crea tarea
 app.post('/api/tasks', (req, res) => {
     const newTask = {
         id: Date.now(),
@@ -30,12 +29,12 @@ app.post('/api/tasks', (req, res) => {
     res.json(newTask);
 });
 
-//iniciar servidor
+//inicia servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
 
-//modificar mi tarea
+//modifica mi tarea
 app.put('/api/tasks/:id', (req, res) => {
     const id = Number(req.params.id);
     const { title, description, completed } = req.body;
@@ -51,7 +50,7 @@ app.put('/api/tasks/:id', (req, res) => {
     res.json(task);
 });
 
-//eliminar una tarea
+//elimina una tarea
 app.delete('/api/tasks/:id', (req, res) => {
     const id = Number(req.params.id);
     const index = tasks.findIndex(t => t.id === id);
